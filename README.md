@@ -1,3 +1,6 @@
+[![Math-Utility Project applying CI](https://github.com/BuiKhang201223/math-util-mvn/actions/workflows/mathutil-ci.yml/badge.svg)](https://github.com/BuiKhang201223/math-util-mvn/actions/workflows/mathutil-ci.yml)
+
+
 ### Welcome to Math Utility Project Repository
 
 ### You will find the following stuff in this Maven project:
