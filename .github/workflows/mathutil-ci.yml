@@ -21,3 +21,12 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml #Câu lệnh đóng gói app thành .jar, và chạy luôn bộ test JUnit
+
+    - name: Distribute jar-war file # Gửi file .jar .war đi đâu, CD nhảy vào ...
+      run: mkdir staging && cp target/*.jar staging # tạo thư mục staging chứa file .jar .war sau khi build      
+     
+    - name: Make hyperlink to jar-war file # Tạo hyperlink để download build 
+      uses: actions/upload-artifact@v1
+      with:
+        name: HAY-DOWN-EM-DI-JAR-LA-EM-DAY # Bản build được đánh version 1.0-SNAPSHOT
+        path: staging
