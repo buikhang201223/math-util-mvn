@@ -21,7 +21,7 @@ public class MathUtility {
     //ko tính giai thừa âm
     //0! = 1! = 1
     public static long getFactorial(int n){
-        long result = 1;
+        long result = 10;
         
         if (n<0 || n>20) 
             throw new IllegalArgumentException("Invalid n, n must be between 0 and 20");
