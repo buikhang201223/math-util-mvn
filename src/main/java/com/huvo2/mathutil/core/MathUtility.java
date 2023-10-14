@@ -20,8 +20,23 @@ public class MathUtility {
     //khi n<0 n>20 ko tính đc do 21! tràn kiểu long
     //ko tính giai thừa âm
     //0! = 1! = 1
+//    public static long getFactorial(int n){
+//        long result = 10;
+//        
+//        if (n<0 || n>20) 
+//            throw new IllegalArgumentException("Invalid n, n must be between 0 and 20");
+//        
+//        if (n == 0 || n == 1) 
+//            return 1;
+//        
+//        for (int i = 2; i <= n; i++) 
+//            result*=i;
+//        
+//        return result;      
+//    }
+    
+    //NÂNG CẤP HÀM TÍNH GIAI THỪA DÙNG ĐỆ QUY
     public static long getFactorial(int n){
-        long result = 10;
         
         if (n<0 || n>20) 
             throw new IllegalArgumentException("Invalid n, n must be between 0 and 20");
@@ -29,11 +44,6 @@ public class MathUtility {
         if (n == 0 || n == 1) 
             return 1;
         
-        for (int i = 2; i <= n; i++) 
-            result*=i;
-        
-        return result;
-        
-        
+        return n * getFactorial(n-1);
     }
 }
